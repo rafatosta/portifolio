@@ -2,7 +2,7 @@ import A from "../styles/A";
 
 export default function SocialMedia() {
   return (
-    <div className="flex flex-row gap-x-2 sm:gap-x-12 justify-center items-center">
+    <div className="flex flex-row gap-x-4 sm:gap-x-12 justify-center items-center pt-8">
       {/* linkedin  */}
       <A
         href="https://www.linkedin.com/in/rafael-tosta-2006874a/"
@@ -20,7 +20,7 @@ export default function SocialMedia() {
             fill="currentColor"
           />
         </svg>
-        <p className="invisible group-hover:visible">LinkedIn</p>
+        <p className="invisible group-hover:visible text-sm text-center">LinkedIn</p>
       </A>
       {/* github */}
       <A href="https://github.com/rafatosta" target="_blank">
@@ -36,14 +36,14 @@ export default function SocialMedia() {
             fill="currentColor"
           />
         </svg>
-        <p className="invisible group-hover:visible">Github</p>
+        <p className="invisible group-hover:visible text-sm text-center">Github</p>
       </A>
       {/* instagram */}
       <A href="https://www.instagram.com/rafatosta_/" target="_blank">
         <svg
           width="32"
           height="32"
-          viewBox="0 0 32 32"
+          viewBox="0 0 30 30"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -52,7 +52,7 @@ export default function SocialMedia() {
             fill="currentColor"
           />
         </svg>
-        <p className="invisible group-hover:visible">Instagram</p>
+        <p className="invisible group-hover:visible text-sm text-center">Instagram</p>
       </A>
       {/* whatsapp */}
       <A href="https://api.whatsapp.com/send?phone=5575988360319&text=Ol%C3%A1,%20podemos%20conversar?" target="_blank">
@@ -73,13 +73,8 @@ export default function SocialMedia() {
               fill="currentColor"
             />
           </g>
-          <defs>
-            <clipPath id="clip0_1_81">
-              <rect width="32" height="32" fill="white" />
-            </clipPath>
-          </defs>
         </svg>
-        <p className="invisible group-hover:visible">Whatsapp</p>
+        <p className="invisible group-hover:visible text-sm text-center">Whatsapp</p>
       </A>
       {/* email */}
       <A href="mailto:rafa.ecomp@gmail.com" target="_blank">
@@ -95,7 +90,7 @@ export default function SocialMedia() {
             fill="currentColor"
           />
         </svg>
-        <p className="invisible group-hover:visible">Email</p>
+        <p className="invisible group-hover:visible text-sm text-center">Email</p>
       </A>
     </div>
   );
