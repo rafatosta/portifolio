@@ -2,7 +2,7 @@ import A from "../styles/A";
 
 export default function SocialMedia() {
   return (
-    <div className="flex flex-row gap-x-6 sm:gap-x-12 justify-center items-center">
+    <div className="flex flex-row gap-x-2 sm:gap-x-12 justify-center items-center">
       {/* linkedin  */}
       <A
         href="https://www.linkedin.com/in/rafael-tosta-2006874a/"
