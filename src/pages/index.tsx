@@ -13,6 +13,7 @@ export default function Home() {
       </Head>
       <main>
         <Main />
+
         <About />
       </main>
     </div>

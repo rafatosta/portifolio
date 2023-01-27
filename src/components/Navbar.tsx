@@ -13,8 +13,8 @@ export const navigation = [
 
 export function Navbar() {
   return (
-    <nav className="fixed p-8 tracking-wide flex flex-row gap-x-8 justify-between w-full">
-      <Image alt="Logo" src={LogoIcon} width={32} height={32} />
+    <nav className="fixed p-8 tracking-wide flex flex-row gap-x-8 justify-end w-full">
+     
       <div className="sm:flex flex-1 gap-x-8 justify-end hidden">
         {navigation.map((item) => (
           <Link key={item.name} href={item.href}>
