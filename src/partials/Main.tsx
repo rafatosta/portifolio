@@ -8,15 +8,17 @@ function Main() {
   return (
     <Container id="home" className="bg-primary gap-8">
       <motion.div
-          initial={{ opacity: 0}}
-          animate={{ opacity: 1 }}
-          transition={{
-            delay: 0.1,
-            x: { duration: 1 },
-            default: { ease: "linear" }
-          }}
-        ><Image alt="Logo marca" src={MarcaIcon} width={840} /></motion.div>
-      
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 0.1,
+          x: { duration: 1 },
+          default: { ease: "linear" },
+        }}
+      >
+        <Image alt="Logo marca" src={MarcaIcon} width={840} priority />
+      </motion.div>
+
       <SocialMedia />
     </Container>
   );
