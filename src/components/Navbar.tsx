@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import LogoIcon from "../../public/assets/logo.svg";
 import { MenuButton } from "./MenuButton";
 
 export const navigation = [
@@ -12,9 +10,9 @@ export const navigation = [
 ];
 
 export function Navbar() {
+
   return (
-    <nav className="fixed p-8 tracking-wide flex flex-row gap-x-8 justify-end w-full">
-     
+    <nav className="fixed p-8 tracking-wide flex flex-row gap-x-8 justify-end w-full bg-primary">
       <div className="sm:flex flex-1 gap-x-8 justify-end hidden">
         {navigation.map((item) => (
           <Link key={item.name} href={item.href}>

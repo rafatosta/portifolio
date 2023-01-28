@@ -16,7 +16,7 @@ function Main() {
           default: { ease: "linear" },
         }}
       >
-        <Image alt="Logo marca" src={MarcaIcon} width={840} priority />
+        <Image alt="Logo-marca" src={MarcaIcon} width={840} priority/>
       </motion.div>
 
       <SocialMedia />
