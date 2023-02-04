@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Main from "../partials/Main";
-import About from "../partials/About";
-import Skills from "../partials/Skills";
-import Projects from "../partials/Projects";
+import Services from "../partials/Services";
 import Contact from "../partials/Contact";
 
 export default function Home() {
@@ -16,9 +14,7 @@ export default function Home() {
       </Head>
       <main>
         <Main />
-        <About />
-        <Skills />
-        <Projects />
+        {/* <Services /> */}
         <Contact />
       </main>
     </div>
