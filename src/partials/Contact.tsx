@@ -67,6 +67,7 @@ export function Contact() {
   }
   return (
     <Container id="contact">
+      <h1 className="text-2xl">Contato</h1>
       <form
         onSubmit={handleSubmit(onFormSubmit)}
         className="flex flex-col justify-center items-center w-full p-8 gap-2"
