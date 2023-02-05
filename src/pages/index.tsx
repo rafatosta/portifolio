@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Main from "../partials/Main";
 import Services from "../partials/Services";
-import Contact from "../partials/Contact";
+import {Contact} from "../partials/Contact";
 
 export default function Home() {
   return (

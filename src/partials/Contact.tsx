@@ -1,7 +1,9 @@
 import Container from "../styles/Container";
 import { useForm } from "react-hook-form";
+import { toast, ToastContainer } from "react-toastify";
+import { useRouter } from "next/router";
 
-interface MailMessage {
+export interface MailMessage {
   name: string;
   phone: string;
   email: string;
@@ -9,7 +11,7 @@ interface MailMessage {
   message: string;
 }
 
-function Contact() {
+export function Contact() {
   const {
     register,
     handleSubmit,
@@ -17,8 +19,51 @@ function Contact() {
     reset,
   } = useForm<MailMessage>();
 
-  function onFormSubmit(data: MailMessage) {
-    console.log(data);
+  const router = useRouter();
+
+  async function onFormSubmit(data: MailMessage) {
+    let requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    };
+
+    try {
+      const response = await fetch("/api/contact", requestOptions);
+      if (response.status == 200) {
+        toast("Email enviado com sucesso! 🚀", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: 0,
+        });
+        reset();
+        router.push("/");
+      } else {
+        toast("Erro ao enviar Email!", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: 0,
+        });
+      }
+    } catch (err) {
+      toast("Erro ao enviar Email!", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: 0,
+      });
+    }
   }
   return (
     <Container id="contact">
@@ -91,6 +136,19 @@ function Contact() {
           </span>
         </label>
 
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+
         <button
           type="submit"
           className="border rounded-md font-semibold bg-primary text-white p-2 px-4 hover:bg-secondary hover:text-black active:bg-secondary/70"
@@ -101,5 +159,3 @@ function Contact() {
     </Container>
   );
 }
-
-export default Contact;
