@@ -3,11 +3,16 @@ import { MenuButton } from "./MenuButton";
 
 export const navigation = [
   { name: "Home", href: "/" },
+  { name: "Contato", href: "/#contact" },
+];
+
+/* export const navigation = [
+  { name: "Home", href: "/" },
   { name: "Sobre", href: "/#about" },
   { name: "Habilidades", href: "/#skills" },
   { name: "Projetos", href: "/#projects" },
   { name: "Contato", href: "/#contact" },
-];
+]; */
 
 export function Navbar() {
 
